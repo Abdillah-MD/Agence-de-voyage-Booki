@@ -241,6 +241,7 @@ input[type="text"] {
     font-weight: 700;
     color: black;
 }
+
 /******** Ici ça nous permet de customiser la section de recherche avec les filtres **********/
 .sectionSearch h2 {
     margin-bottom: 0;
@@ -259,6 +260,7 @@ input[type="text"] {
     font-size: 18px;
     display: inline;
     margin-right: 15px;
+    padding: 4px 19px 4px 19px;
 }
 .filtre {
     font-size: 17px;
@@ -272,12 +274,20 @@ input[type="text"] {
     justify-content: flex-start;
 }
 .BtnFiltre {
-    border: solid 2px;
-    border-radius: 25px;
-    border-color: #d9d9d9;
+    border: solid 2px #d9d9d9;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+.Titre-flt {
+    margin-top: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
 }
 .BtnFiltre p {
     display: inline;
+    padding-right: 10px;
 }
 .BtnFiltre:hover {
     background-color: #DEEBFF;
@@ -319,8 +329,9 @@ input[type="text"] {
 }
 .lieu p {
     padding: 20px 19px 20px 19px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+    
 }
 /********* Ce code permet la customisation du footer *****************/
 .footer {
@@ -332,6 +343,7 @@ input[type="text"] {
 }
 .footer-content {
     width: 33.33%;
+    padding: 20px;
 }
 .footer-text:hover {
     color: var(--main-color);
@@ -344,6 +356,34 @@ input[type="text"] {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    /****** Customisation secction recherche ville ********/
+    .filtreBar {
+        position: relative;
+        width: 100%;
+        justify-content: start;
+        overflow: visible;
+        white-space: nowrap;
+        padding-top: 10px;
+    }
+    .Titre-flt {
+        position: absolute;
+        top: -20px;
+    }
+    .BtnFiltre {
+        margin-top: 40px;
+        padding: 4px 10px 4px 10px;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .BtnFiltre p {
+        font-size: 16px;
+        padding-right: 5px;
+    }
+    /****** Customisation section hebergement **********/
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -374,9 +414,167 @@ input[type="text"] {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    /************ Ce code permet de modifier la section activité ************/
+    .lieu {
+        height: 300px;
+    }
+    .lieu img {
+        height: 200px;
+    }
+    .lieu p {
+        display: flex;
+        padding: 0 19px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        padding: 0;
+    }
+    /* Ce code change la disposition du contenu dans le header  */
+    header {
+        flex-direction: column;
+    }
+    .logo {
+        padding: 30px 0;
+    }
+    .logo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav .menu {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        gap: 10px;
+    }
+    .menu li {
+        text-align: center;
+        max-width: 100%;
+        width: 50%;
+        list-style-type: none;
+    }
+    .Heberge, a:active, .Activi:hover, .Heberge:hover {
+        border-top: none;
+        border-bottom: solid 2px #0065FC;
+        padding-bottom: 30px;
+        color: #0065FC;
+        transition: all 0.2s ease;
+    }
+    .Activi {
+        border-bottom: solid 2px #F2F2F2;
+        padding-bottom: 30px;
+    }
+    /********** Section search & filtres ********/
+    .sectionSearch h2 {
+        margin-top: 50px;
+    }
+    form {
+        max-width: 100%;
+        width: 100%;
+    }
+    .search-container {
+        padding: 0 20px;
+    }
+    .filtreBar {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    .BtnFiltre {
+        padding: 0 35px;
+    }
+    .filtre {
+        width: 40%;
+        margin-top: 0;
+    }
+    .F1, .F2 {
+        margin-top: 40px;
+    }
+    /*********** Section hebergements ***********/
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    /***** Populaire ***/
+    .hebergements-and-populaires .populaires {
+        background-color: var(--main-bg-color);
+        border-radius: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .populaires {
+        width: 100%;
+        background-color: #0065FC;
+    }
+    .populaires-cards {
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+    .card {
+        min-width: 160px;
+        width: calc(335% - 5px);
+    }
+    /******** Hebergements *************/
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
+    }
+    .hebergements-cards {
+        flex-direction: column;
+    }
+    .surMarseille {
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+        height: 250px;
+        border-radius: 20px;
+    }
+    .taille-image {
+        max-width: 100%;
+        width: 96%;
+        height: 124px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .surMarseille-content {
+        padding: 0 15px;
+    }
+    /****** Activité Marseille *****/
+    .lieuContent {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .lieu {
+        overflow: hidden;
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 20px;
+        height: auto;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    } 
+    .lieu img, .funContent, .funCard {
+        max-width: 100%;
+        width: 100%;
+    }
+    .lieu img {
+        height: 141px;
+    }
+    .lieu p {
+        padding: 20px 19px;
+    }
+    /******** Footer mobile *********/
+    .footer {
+        flex-direction: column;
+    }
+    .footer-content {
+        width: 100%;
+    }
 }
