@@ -33,7 +33,11 @@
                 <section class="sectionSearch">
                 <h2>Trouver votre hébergement pour des vancances de rêve</h2>
                 <p class="Subtitre">En plein centre ville ou en pleine nature</p>
-                <div>Recherche ici voir cours ...</div>
+                <form class="Tab_Desk" action="" method="get">
+                    <label for="Ville"><i class="fa-solid fa-location-dot"></i></label>
+                    <input type="text" name="Ville" id="Ville" placeholder="Marseille, France">
+                    <input type="submit" value="Rechercher" name="rechercher" id="rechercher">
+                </form>
                 <div class="filtreBar btnFiltreFlex">
                     <p class="Filtres">Filtres</p>
                     <a class="filtre BtnFiltre" href="#">
@@ -303,10 +307,26 @@
                 </section>
             </div>
         </main>
-        <footer></footer>
-    </div>
-    <div>
-        Pour voir la différence 
+        <footer>
+            <div class="footer">
+                <article class="footer-content">
+                    <h4>À propos</h4>
+                    <p class="footer-text">Fonctionnement du site</p>
+                    <p class="footer-text">Conditions générales</p>
+                    <p class="footer-text">Données et confidentialité</p>
+                </article>
+                <article class="footer-content">
+                    <h4>Nos hébergement</h4>
+                    <p class="footer-text">Charte qualité</p>
+                    <p class="footer-text">Proposer votre hôtel</p>
+                </article>
+                <article class="footer-content">
+                    <h4>Assistance</h4>
+                    <p class="footer-text">Centre d'aide</p>
+                    <p class="footer-text">Nous contacter</p>
+                </article>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

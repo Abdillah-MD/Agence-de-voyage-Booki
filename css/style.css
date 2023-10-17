@@ -79,6 +79,7 @@ a {
     background-color: white;
     max-width: 100%;
     width: calc(100% - 5px);
+    height: 280px;
     border-radius: 20px;
     overflow: hidden;
     padding: 0 0 15px 0;
@@ -197,9 +198,56 @@ ul .Heberge, ul .Activi {
     color: #0065FC;
     transition: all 0.2s ease-in;
 }
+/******** Ce code permet la customisation du formaulaire de recherche ************************/
+form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fa-location-dot {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
 
+label{
+    background-color: #F2F2F2;
+    border: solid 1px #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    margin-right: -1px;
+    padding: 15px 16px;
+    height: 21px;
+}
+input[type="submit"] {
+    background-color: #0065FC;
+    border: solid 1px #0065FC;
+    border-radius: 0 15px 15px 0;
+    padding: 15px 16px;
+    font-size: 18px;
+    font-weight: 700; 
+    color: white;
+}
+input[type="text"] {
+    border: 1px solid #F2F2F2;
+    width: 180px;
+    padding: 15px 16px;
+    margin-right: -1px;
+    height: 21px;
+    
+}
+#Ville::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
 /******** Ici ça nous permet de customiser la section de recherche avec les filtres **********/
+.sectionSearch h2 {
+    margin-bottom: 0;
+}
 .Subtitre {
+    margin-top: 4px;
+    margin-bottom: 10px;
     font-size: 16px;
     font-weight: 400;
 }
@@ -246,6 +294,7 @@ ul .Heberge, ul .Activi {
 .funPlace {
     padding: 30px;
 }
+
 .lieuContent {
     display: flex;
     flex-direction: row;
@@ -255,12 +304,12 @@ ul .Heberge, ul .Activi {
 }
 .funCard {
     width: 90%;
-    
 }
 .lieu {
     overflow: hidden;
     box-shadow: 2px 2px 3px rgb(237, 237, 237);
     border-radius: 20px;
+    height: 480px;
 }
 .lieu img {
     max-width: 300px;
@@ -273,6 +322,23 @@ ul .Heberge, ul .Activi {
     font-size: 14px;
     font-weight: 700;
 }
+/********* Ce code permet la customisation du footer *****************/
+.footer {
+    padding: 30px;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.footer-content {
+    width: 33.33%;
+}
+.footer-text:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
