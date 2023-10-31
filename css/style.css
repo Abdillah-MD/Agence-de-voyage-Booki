@@ -34,10 +34,10 @@ h1 {
     font-size: 22px;
 }
 h3 {
-    font-size: 16px;
+    font-size: 15px;
 }
 h3, h1 {
-    margin: 10px 0 5px 0;
+    margin: 10px 0 6px 0;
 }
 .section-title {
     margin: 0;
@@ -84,23 +84,21 @@ h3, h1 {
 .hebergements {
     width: 65%;
 }
-.surMarseille {
+.logement {
     background-color: white;
     max-width: 100%;
+    height: 100%;
     width: 100%;
-    height: 250px;
     border-radius: 20px;
     overflow: hidden;
     padding: 0 0 15px 0;
-    margin-top: 30px;
 }
-.taille-image img {
+.logement img {
     width: 100%;
     height: 124px;
 }
-.surMarseille-content {
-    padding: 0 15px 0 15px;
-    height: 120px;
+.logement-content {
+    padding: 0 0 0 7px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,27 +109,19 @@ h3, h1 {
     justify-content: space-between;
     width: 100%;   
 }
-.hebergements-cards a {
-    width: 32%;
-}
-.taille-image {
-    max-width: 250px;
-    width: 95%;
-    height: 207px;
+.hebergements-cards--link {
+    width: 31%;
+    margin: 30px 0 0 0;
+    border: 4px solid white;
+    border-radius: 25px;
     overflow: hidden;
-    border: solid 5px white;
-    border-radius: 20px 20px 0 0;
-    height: 124px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .plus-txt {
     font-size: 18px;
     font-weight: 700;
     margin-top: 30px;
 }
-.surMarseille-subtitle {
+.logement-subtitle {
     margin: 5px 0 5px 0;
 }
 /****** Populaires ***********/
@@ -210,7 +200,7 @@ ul .Heberge, ul .Activi {
 .Activi {
     border-top: solid 2px transparent;
 }
-.Heberge, a:active, .Activi:hover, .Heberge:hover {
+.Heberge, .Activi:hover, .Heberge:hover {
     border-top: solid 2px;
     border-color: #0065FC;
     padding-top: 16px;
@@ -281,12 +271,6 @@ input[type="text"] {
     margin-right: 15px;
     
 }
-.filtre {
-    font-size: 17px;
-    font-weight: 700;
-    margin: 0;
-    padding: 4px 5px 4px 15px;
-}
 .BtnSecFiltre {
     display: flex;
     flex-direction: row;
@@ -303,11 +287,10 @@ input[type="text"] {
     border-radius: 50px;
     display: flex;
     justify-content: space-around;
-    margin-right: 15px;
-}
-.BtnMobile-2_2 {
-    display: flex;
-    flex-direction: row;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 10px;
+    padding: 4px 5px 4px 15px;
 }
 .Titre-flt {
     margin-top: 0;
@@ -336,7 +319,7 @@ input[type="text"] {
     padding: 30px;
 }
 .lieuContent a {
-    width: 25%;
+    width: 24%;
 }
 .lieuContent {
     display: flex;
@@ -346,29 +329,25 @@ input[type="text"] {
     padding-bottom: 30px;
 }
 .funCard {
-    width: 90%;
-}
-.lieu {
-    width: 100%;
     overflow: hidden;
     box-shadow: 2px 2px 3px rgb(237, 237, 237);
     border-radius: 20px;
     height: 390px;
 }
-.lieu img {
+.funCard img {
     width: 100%;
     height: 320px;
     object-fit: cover;
 }
-.lieu p {
-    padding: 0 0 0 19px;
+.funCard h3 {
+    padding: 0 5px 0 10px;
     font-size: 16px;
     font-weight: 700;
     
 }
 /********* Ce code permet la customisation du footer *****************/
 .footer {
-    padding: 30px;
+    padding: 5px 15px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
@@ -376,7 +355,7 @@ input[type="text"] {
 }
 .footer-content {
     width: 33.33%;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .footer-text:hover {
@@ -450,22 +429,25 @@ input[type="text"] {
         font-size: 13px;
     }
     /************ Ce code permet de modifier la section activité ************/
-    .lieu {
+    .funCard {
         height: 242px;
     }
-    .lieu img {
+    .funCard img {
         height: 150px;
     }
-    .lieu p {
+    .funCard p {
         padding: 0 19px;
         margin: 15px 0 0 0;
     }
     /********** Footer tablette **************/
     .footer {
-        padding: 10px 30px 20px 30px;
+        padding: 0 10px 10px 10px;
     }
     .footer-content {
-        padding: 10px 0 10px 20px;
+        padding: 10px 20px 10px 20px;
+    }
+    .footer-content h4 {
+        margin: 5px 0 5px 0;
     }
     .footer-content p {
         font-size: 14px;
@@ -508,7 +490,7 @@ input[type="text"] {
         width: 50%;
         list-style-type: none;
     }
-    .Heberge, a:active, .Activi:hover, .Heberge:hover {
+    .Heberge, .Activi:hover, .Heberge:hover {
         border-top: none;
         border-bottom: solid 2px #0065FC;
         padding-bottom: 30px;
@@ -563,16 +545,14 @@ input[type="text"] {
         justify-content: flex-start;
     }
     .BtnSecFiltre {
-        flex-direction: column;
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .BtnFiltre {
-        padding: 0 35px;
-        justify-content: space-around;
-    }
-    .filtre {
-        width: 20%;
-        margin: 15px 10px 0 0;
+        justify-content: center;
+        width: 40%;
+        margin: 10px 4px 0 0;
     }
     .search-container .i-section {
         margin-right: 20px;
@@ -618,26 +598,17 @@ input[type="text"] {
     .hebergements-cards {
         flex-direction: column;
     }
-    .hebergements-cards a {
+    .hebergements-cards--link {
         width: 100%;
-    }
-    .surMarseille {
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-        height: 250px;
         border-radius: 20px;
     }
-    .taille-image {
-        max-width: 100%;
-        width: 96%;
-        height: 124px;
+    .logement img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .taille-image img {
+        height: 154px;
         object-fit: cover;
     }
-    .surMarseille-content {
+    .logement-content {
         padding: 0 15px;
     }
     /****** Activité Marseille *****/
@@ -648,7 +619,7 @@ input[type="text"] {
         flex-direction: column;
         justify-content: flex-end;
     }
-    .lieu {
+    .funCard {
         overflow: hidden;
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
         border-radius: 20px;
@@ -657,24 +628,25 @@ input[type="text"] {
         display: flex;
         flex-direction: column;
     } 
-    .lieu img, .funContent, .funCard {
+    .funCard img, .funContent, .funCard {
         max-width: 100%;
         width: 100%;
     }
-    .lieu img {
+    .funCard img {
         height: 141px;
     }
-    .lieu p {
+    .funCard p {
         padding: 20px 19px;
     }
     /******** Footer mobile *********/
     .footer {
         flex-direction: column;
+        overflow: hidden;
     }
     .footer-content {
         width: 100%;
     }
-    .footer-text {
+    .footer-content p {
         font-size: 16px;
     }
 }
