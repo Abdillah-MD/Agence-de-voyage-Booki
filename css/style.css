@@ -430,12 +430,13 @@ input[type="text"] {
     }
     /************ Ce code permet de modifier la section activité ************/
     .funCard {
-        height: 242px;
+        height: 220px;
     }
     .funCard img {
         height: 150px;
     }
     .funCard h3 {
+        font-size: 15px;
         padding: 0 19px;
         margin: 15px 0 0 0;
     }
@@ -637,6 +638,7 @@ input[type="text"] {
     }
     .funCard h3 {
         padding: 8px 20px;
+        margin: 15px 0;
     }
     /******** Footer mobile *********/
     .footer {
