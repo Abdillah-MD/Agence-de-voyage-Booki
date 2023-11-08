@@ -455,9 +455,9 @@ input[type="text"] {
         font-size: 14px;
     }
 }
-/* Si l'écran est supérieur à 768px - Cacher le formulaire mobile ***/
+/* Si l'écran est supérieur à 768px - Cacher le boutton mobile ***/
 @media (min-width: 768px) {
-    .Mobile {
+    button[type="submit"] {
         display: none;
     }
 }
@@ -504,10 +504,11 @@ input[type="text"] {
         padding-bottom: 28px;
     }
     /********** Section search & filtres ********/
-    .Tab_Desk {
+    
+    input[type="submit"] {
         display: none;
     }
-    #rechercher {
+    #recherche {
         background-color: #0065FC;
         border: solid 1px #0065FC;
         border-radius: 15px;
